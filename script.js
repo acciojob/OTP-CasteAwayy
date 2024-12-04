@@ -13,6 +13,8 @@ inputField.forEach((ele) => {
       else cnt = 6;
     }
     if (e.keyCode == 8) {
+      const initValue = e.target.id.split("-")[1];
+      cnt = parseInt(initValue);
       cnt--;
       e.target.value = "";
       if (cnt > 0) e.target.previousElementSibling.focus();
